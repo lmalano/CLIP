@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style1.css">
+  <title>Amigos de la Pagina</title>
+</head>
+
+<body>
+ 
+  <h1>Lista de amigos de la pagina</h1>
+
+
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Firstname</th>
+          <th scope="col">Lastname</th>
+          <th scope="col">Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Ivan</td>
+          <td>Contrera</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Romero</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Susana</td>
+          <td>Horia</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Gaston</td>
+            <td>Drogrado</td>
+            <td>24</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Esteban</td>
+          <td>Quito</td>
+          <td>16</td>
+        </tr>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <class="container" id="formularioo">
+
+<h1>Añadete a mis contactos!</h1>
+    <form action="#" class="was-validated">
+        <div class="form-group">
+            <label for="name"> Nombre</label>
+            <input type="text" id="name" class="form-control" required>
+            <div class="valid-feedback">ok</div>
+            <div class="invalid-feedback">dato obligatorio</div>
+        </div>
+        <div class="form-group">
+            <label form="apellido">Apellido</label>
+            <input type="text" id="apellido" maxlength=25 class="form-control" required>
+            <div class="valid-feedback">ok</div>
+            <div class="invalid-feedback">dato obligatorio</div>
+        </div>
+        <div class="form-group">
+          <label form="edad">Edad</label>
+          <input type="text" id="edad" pattern="[0-9]{2,3}" maxlength=3 class="form-control" required>
+          <div class="valid-feedback">ok</div>
+          <div class="invalid-feedback">dato obligatorio</div>
+      </div>
+      <input onclick="enviar();" type="submit" >
+    </form>
+
+</class>
+
+
+<label for="comida" id="comida1">Tu comida favorita es?</label>
+<select name="comida" id="comida2">
+  <option value="milanesas" id="1">Milanesas</option>
+  <option value="ravioles" id="2">Ravioles</option>
+  <option value="asado" id="3">Asado</option>
+  <option value="sushi" id="4">Sushi</option>
+  <input onclick="comida();" type="submit">
+</select>
+
+
+
+<script>
+  
+      var max = 30;
+			var min = 1;
+      var numero_aleatorio1 = Math.round(Math.random() * (max - min) + min);
+      var numero_aleatorio2 = Math.round(Math.random() * (max - min) + min);
+      var suma=numero_aleatorio1+numero_aleatorio2;
+
+      numero= parseInt( prompt('la suma de '+numero_aleatorio1+'+'+numero_aleatorio2+' es? '));
+
+     if(numero==suma){
+       alert("muy bien! estamos despierto")
+     }
+     else{alert("no estamos bien para las matematicas ja!")}
+
+function enviar()
+{ 
+  var nombre=document.getElementById("name").value;
+  var apellido=document.getElementById("apellido").value;
+  var edad=document.getElementById("edad").value;
+  
+  if(nombre=="" || apellido=="" || edad=="" || isNaN(edad) ){
+      alert("datos incompleto")}
+
+else{alert("tu solicitud de amistad a nustra pagina fue enviada, gracias por ser parte de mi")}
+
+}
+
+function comida()
+{
+  var comidaa=document.getElementById("comida2").value;
+  alert("tu comida favorita es : "+comidaa+"");
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
